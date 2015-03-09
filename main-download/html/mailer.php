@@ -14,9 +14,10 @@ $phone 		= $_POST['phone'];
 $maincourse = $_POST['main-course']; 
 $dessert 	= $_POST['dessert'];
 $attendance	= $_POST['radio'];
+$number     = $_POST['number'];
 
 // Check that all required inputs are not empty.
-if(empty($firstname) || empty($lastname) || empty($attendance) || empty($email) ) {
+if(empty($firstname) || empty($lastname) || empty($attendance) || empty($email) || empty($number) ) {
     die('Please ensure all required inputs are provided.');
 }
 
@@ -32,6 +33,7 @@ You have received an RSVP submission.
 Guest Details
 =================================
 Name: {$firstname} {$lastname}
+Number of Attendees: {$number}
 Email: {$email}
 Phone: {$phone}
 Attendance: {$attendance}    
@@ -44,16 +46,16 @@ Dessert: {$dessert}
 TEXT;
 
 // Email to send to
-$to = 'hello@yourdomain.com';
+$to = 'bralafa@gmail.com';
 
 // Email Subject
-$subject = 'Eternity | A Guest has submitted their RSVP status.';
+$subject = 'Wedding | A Guest has submitted their RSVP status.';
 
 // Name to show email from
-$from = 'Your Site';
+$from = 'The LaFaves';
 
 // Domain to show the email from
-$fromEmail = 'hello@domain.com';
+$fromEmail = 'brandon@the-lafaves.com';
 
 // Construct a header to send who the email is from
 $header = 'From: ' . $from . '<' . $fromEmail . '>';
