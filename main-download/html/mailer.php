@@ -7,24 +7,24 @@ $message = '';
 
 // Declaring the variable for submitted inputs
 
-$firstname 	= $_POST['firstname'];
-$lastname 	= $_POST['lastname'];
-$email 		= $_POST['email'];
-$phone 		= $_POST['phone'];
+$name 	= $_POST['name'];
+$noguests 	= $_POST['noguests'];
+$naguests 		= $_POST['naguests'];
 $maincourse = $_POST['main-course']; 
 $dessert 	= $_POST['dessert'];
 $attendance	= $_POST['radio'];
 $number     = $_POST['number'];
+$chicken    = $_POST['chicken'];
+$beef    = $_POST['beef'];
+$vegetarian   = $_POST['vegetarian'];
+$note         = $_POST['note'];
 
 // Check that all required inputs are not empty.
-if(empty($firstname) || empty($lastname) || empty($attendance) || empty($email) || empty($number) ) {
+if(empty($name) || empty($attendance) ) {
     die('Please ensure all required inputs are provided.');
 }
 
 //Validates correct email formatting
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    die('Please use the correct format for your email and try again');
-}
 
 // Construct the message
 $message .= <<<TEXT
@@ -32,17 +32,20 @@ You have received an RSVP submission.
 
 Guest Details
 =================================
-Name: {$firstname} {$lastname}
-Number of Attendees: {$number}
-Email: {$email}
-Phone: {$phone}
+Name: {$name}
+Number of Attendees: {$noguests}
+Guest Name(s):{$naguests}
 Attendance: {$attendance}    
 
 Meal Selection
 =================================
-Main: {$maincourse} 
-Dessert: {$dessert}
+Chicken: {$chicken}
+Beef: {$beef}
+Vegetarian: {$vegetarian}
 
+Note:
+
+{$note}
 TEXT;
 
 // Email to send to

@@ -421,7 +421,9 @@ form.custom .radio {
 	border: solid 5px #e6e6e6;
 	height: 29px;
 	width: 30px;
+
 }
+
 form.custom .custom.radio.checked:before {
 	top: 4px;
 	left: 5px;

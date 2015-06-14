@@ -55,7 +55,7 @@
 				<li><a href="#section-3">Groomsmen</a></li>
 				<li><a href="#section-4">Bridesmaids</a></li>
 				<li><a href="#section-5">Gifts</a></li>
-				<!--<li><a href="#section-6">Rsvp</a></li>	-->		
+				<li><a href="#section-6">Rsvp</a></li>		
 			</ul>
 		</section>
 	</nav><!-- END Navigation for mobile devices -->
@@ -72,7 +72,7 @@
 						<li><a href="#section-3">Groomsmen</a></li>
 						<li><a href="#section-4">Bridesmaids</a></li>
 						<li><a href="#section-5">Gifts</a></li>
-						<!--<li><a href="#section-6">Rsvp</a></li>	-->
+						<li><a href="#section-6">Rsvp</a></li>
 					</ul>
 				</nav>
 				<span class="ribbon"></span>
@@ -106,9 +106,9 @@
 				</div><!-- END .row -->
 			</div><!-- END #section-0 -->
 			
-			<!-- REMOVE THIS<div class="callout">
+			<div class="callout">
 				<a href="#section-6" class="button radius js-scroll">
-					<i class="fa fa-envelope"></i> <span class="btn-label">Click here to RSVP today</span>
+					<i class="fa fa-envelope"></i> <span class="btn-label">Click here to RSVP</span>
 				</a>
 			</div><!-- END .callout -->
 
@@ -321,40 +321,41 @@
 
 			<div id="section-6" class="js-form">			    
 				<div class="section-title-container">				
-					<!--<h2 class="section-title">Rsvp</h2>
+					<h2 class="section-title">Rsvp</h2>
 					<span class="hearts"></span>
 				</div>
 				<div class="small-12 large-10 large-centered columns">
-					<!-- UNCOMMENT THIS BRANDON <form data-abide method="POST" action="#" class="rsvp-form custom" id="js-form">			
+					<form data-abide method="POST" action="#" class="rsvp-form custom" id="js-form">			
 						<fieldset class="rsvp-details">
 							<!-- Displays a global alert if required fields are missing -->
-							<!-- UNCOMMENT THIS BRANDON <div class="js-display"></div>
+							<div class="js-display"></div>
 							<legend>
 								Kindly respond by <strong>August 20th, 2015</strong>. We look forward to celebrating with you!
 							</legend>
 							<div class="row">
 								<div class="large-6 columns">
-									<label for="firstname">First Name</label>
-									<input type="text" class="input-field" id="firstname" name="firstname" value="" placeholder="Your first name is required" required>
-									<small class="error">First Name is required.</small>
+									<label for="firstname">Name</label>
+									<input type="text" class="input-field" id="name" name="name" value="" placeholder="Your name is required" required>
+									<small class="error">Name is required.</small>
 								</div>
 								<div class="large-6 columns">
-									<label for="lastname">Last Name</label>
-									<input type="text" class="input-field" id="lastname" name="lastname" value="" placeholder="Your last name is required" required>
-									<small class="error">Last Name is required.</small>
+									<label for="lastname">Number of guest(s)</label>
+									<input type="text" class="input-field" id="noguests" name="noguests" value="" placeholder="Number of guest(s)">
+									
 								</div>
 							</div>
 							<div class="row">
-								<div class="large-6 columns">
-									<label for="email">Email</label>
-									<input type="email" class="input-field" id="email" name="email" value="" placeholder="name@yourdomain.com" required>
-									<small class="error">Valid Email is required.</small>
+								<div class="large-12 columns">
+									<label for="email">Name of guest(s)</label>
+									<input type="text" class="input-field" id="naguests" name="naguests" value="" placeholder="Name of guest(s)">
 								</div>
-								<div class="large-6 columns">
-									<label for="phone">Phone</label>
-									<input type="tel" class="input-field" id="phone" name="phone" value="" placeholder="A phone number is optional">
+							</div>
+                            <div class="row">
+								<div class="large-12 columns">
+									<label for="email">Note</label>
+									<input type="text" class="input-field" id="note" name="note" value="" placeholder="Leave us a note!">
 								</div>
-							</div>							
+							</div>	
 						</fieldset>
 						<fieldset class="rsvp-attendance">
 							<legend>Will you be attending?</legend>
@@ -372,43 +373,37 @@
 									<span class="radio-label">Declines with Regret.</span>
 								</label>
 							</div>
-                            <div>
-                                <div>
-								<div class="large-6 columns" style="padding:15px">
-									<label for="number">Number of Attendees</label>
-									<input type="text" class="input-field" id="number" name="number" value="" placeholder="How many will be in attendance?">
-								</div>
-                            </div>
-                            </div>
 						</fieldset>
 						<fieldset class="rsvp-meal-choice">
 							<legend>
 								Please select your meal choices
 							</legend>
 							<div class="row">
-							    <div class="large-6 columns">
-							      <label for="main-course">Main</label>
-							      <select id="main-course" name="main-course">
-							        <option selected>None</option>
-							        <option>Chicken</option>
-							        <option>Beef</option>
-							        <option>Vegetarian</option>
-							      </select>
+							    <div class="large-4 columns">
+							      <label for="main-course">Chicken</label>
+							      <input type="text" class="input-field" id="chicken" name="chicken" value="" placeholder="Who wants chicken?">
 							    </div>
-							    
-						    </div>				
+							    <div class="large-4 columns">
+							      <label for="main-course">Beef</label>
+							      <input type="text" class="input-field" id="beef" name="beef" value="" placeholder="Who wants Beef?">
+							    </div>
+                                <div class="large-4 columns">
+							      <label for="main-course">Vegetarian</label>
+							      <input type="text" class="input-field" id="vegetarian" name="vegetarian" value="" placeholder="Who wants vegetarian?">
+							    </div>
+						    </div>	      
 						</fieldset>		
 						<button type="submit" class="button radius" id="js-submit-btn">
 							<i class="fa fa-envelope"></i> 
 							<span class="btn-label">Send</span>
 						</button>
-					</form> AND THIS-->
-					<!-- THIS TOO<p>
+					</form>
+					<p>
 						For any questions please email us:
 						<a href="mailto:bralafa@gmail.com" title="E-mail Us">
 							bralafa@gmail.com
 						</a>
-					</p> DONT FORGET THIS-->
+					</p>
 				</div><!-- END .large-8 -->
 				<div id="map-canvas" style="width:100%; height:500px;"></div>	
 			</div><!-- END .row -->
